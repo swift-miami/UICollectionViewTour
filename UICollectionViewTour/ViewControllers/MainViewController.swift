@@ -1,6 +1,6 @@
 import UIKit
 
-final class MainViewController: UITableViewController {
+final class MainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     // MARK: - Properties
 
@@ -31,56 +31,58 @@ final class MainViewController: UITableViewController {
         }
     }
 
-    private enum Constants {
-        static let cellId = "MainVCCellId"
-    }
-
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupTableView()
+        setupCollectionView()
         title = "UICollectionView Tour"
-        tableView.cellLayoutMarginsFollowReadableWidth = true
+        collectionView.backgroundColor = .systemBackground
+    }
+
+    override func viewWillTransition(to size: CGSize,
+                                     with coordinator: UIViewControllerTransitionCoordinator) {
+
+        coordinator.animate(alongsideTransition: { context in
+            self.collectionViewLayout.invalidateLayout()
+
+        }, completion: nil)
     }
 
     // MARK: - Helpers
     
-    private func setupTableView() {
-        tableView.register(UITableViewCell.self,
-                           forCellReuseIdentifier: Constants.cellId)
-        tableView.rowHeight = 64
-
+    private func setupCollectionView() {
+        collectionView.registerCell(cellClass: ListCollectionCell.self)
     }
 
     // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         Row.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellId,
-                                                 for: indexPath)
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell: ListCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
 
         let row = Row(rawValue: indexPath.row)
-        cell.imageView?.image = row?.image
-        cell.imageView?.tintColor = row?.tintColor
-        cell.textLabel?.text = row?.title
-        cell.textLabel?.textColor = row?.tintColor
-        cell.textLabel?.font = .preferredFont(forTextStyle: .title3)
-        cell.accessoryType = .disclosureIndicator
+
+        cell.configure(with: row?.title,
+                       image: row?.image,
+                       tintColor: row?.tintColor)
 
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 didSelectItemAt indexPath: IndexPath) {
 
         guard let row = Row(rawValue: indexPath.row) else { return }
 
         let viewController: UIViewController
-        
+
         switch row {
         case .flowLayout:       viewController = FlowLayoutViewController()
         case .compositional:    viewController = UIViewController()
@@ -89,4 +91,11 @@ final class MainViewController: UITableViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return CGSize(width: collectionView.bounds.width,
+                      height: 60)
+    }
 }

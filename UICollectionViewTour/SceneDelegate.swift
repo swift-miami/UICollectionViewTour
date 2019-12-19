@@ -10,7 +10,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = scene as? UIWindowScene else { return }
 
-        let mainVC = MainViewController()
+        let layout = UICollectionViewFlowLayout()
+        let mainVC = MainViewController(collectionViewLayout: layout)
         let navController = UINavigationController(rootViewController: mainVC)
         navController.navigationBar.prefersLargeTitles = true
 
