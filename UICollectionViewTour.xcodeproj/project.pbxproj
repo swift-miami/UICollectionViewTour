@@ -24,6 +24,7 @@
 		2EE57C8323A47602001A2F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE57C8123A47602001A2F95 /* LaunchScreen.storyboard */; };
 		2EE57C8D23A47A1D001A2F95 /* FlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE57C8C23A47A1C001A2F95 /* FlowLayoutViewController.swift */; };
 		2EE57C9323A4B2F1001A2F95 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE57C9223A4B2F1001A2F95 /* MainViewController.swift */; };
+		602E9C3223ABED3000E2E87F /* MuiltiSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602E9C3123ABED3000E2E87F /* MuiltiSectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2EE57C8423A47602001A2F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EE57C8C23A47A1C001A2F95 /* FlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutViewController.swift; sourceTree = "<group>"; };
 		2EE57C9223A4B2F1001A2F95 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		602E9C3123ABED3000E2E87F /* MuiltiSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuiltiSectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				2EE57C8C23A47A1C001A2F95 /* FlowLayoutViewController.swift */,
 				2EE57C9223A4B2F1001A2F95 /* MainViewController.swift */,
 				2E6CBA1923AB36D700FC71B2 /* CompositionalLayoutViewController.swift */,
+				602E9C3123ABED3000E2E87F /* MuiltiSectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				2EE57C7923A47600001A2F95 /* SceneDelegate.swift in Sources */,
 				2EE57C8D23A47A1D001A2F95 /* FlowLayoutViewController.swift in Sources */,
 				2E6CBA1C23AB3A1B00FC71B2 /* CollectionHeaderView.swift in Sources */,
+				602E9C3223ABED3000E2E87F /* MuiltiSectionViewController.swift in Sources */,
 				2E1956FF23A4E4B5007B26C0 /* MockData.swift in Sources */,
 				2E6CBA2123AB3FF700FC71B2 /* Season.swift in Sources */,
 				2EE57C9323A4B2F1001A2F95 /* MainViewController.swift in Sources */,

@@ -88,7 +88,7 @@ final class MainViewController: UICollectionViewController, UICollectionViewDele
 
         switch row {
         case .flowLayout:       viewController = FlowLayoutViewController()
-        case .multiSectionFlow: viewController = UIViewController()
+        case .multiSectionFlow: viewController = MultiSectionViewController()
         case .compositional:    viewController = CompositionalLayoutViewController()
         }
 
