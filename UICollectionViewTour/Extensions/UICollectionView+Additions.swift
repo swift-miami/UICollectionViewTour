@@ -22,10 +22,9 @@ extension UICollectionView {
                  forCellWithReuseIdentifier: T.cellReuseIdentifier)
     }
 
-    func registerSupplementaryView<T: UICollectionReusableView>(ofKind kind: String,
-                                                                viewClass: T.Type) {
+    func registerSupplementaryView<T: UICollectionReusableView>(viewClass: T.Type) {
         register(T.self,
-                 forSupplementaryViewOfKind: kind,
+                 forSupplementaryViewOfKind: T.viewReuseIdentifier,
                  withReuseIdentifier: T.viewReuseIdentifier)
     }
 
@@ -44,11 +43,11 @@ extension UICollectionView {
         return cell
     }
 
-    func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: String, for indexPath: IndexPath) -> T {
+    func dequeueReusableSupplementaryView<T: UICollectionReusableView>(indexPath: IndexPath) -> T {
         let reuseIdentifier = T.viewReuseIdentifier
 
         guard
-            let cell = dequeueReusableSupplementaryView(ofKind: kind,
+            let cell = dequeueReusableSupplementaryView(ofKind: reuseIdentifier,
                                                         withReuseIdentifier: reuseIdentifier,
                                                         for: indexPath) as? T
         else {

@@ -11,6 +11,11 @@
 		2E1956FD23A4CE3C007B26C0 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1956FC23A4CE3C007B26C0 /* UICollectionView+Additions.swift */; };
 		2E1956FF23A4E4B5007B26C0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1956FE23A4E4B5007B26C0 /* MockData.swift */; };
 		2E19570123A864BA007B26C0 /* NSCollectionLayoutSection+ComposedLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19570023A864BA007B26C0 /* NSCollectionLayoutSection+ComposedLayouts.swift */; };
+		2E6CBA1A23AB36D700FC71B2 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CBA1923AB36D700FC71B2 /* CompositionalLayoutViewController.swift */; };
+		2E6CBA1C23AB3A1B00FC71B2 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CBA1B23AB3A1B00FC71B2 /* CollectionHeaderView.swift */; };
+		2E6CBA1E23AB3F0600FC71B2 /* SeasonCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CBA1D23AB3F0600FC71B2 /* SeasonCardCollectionCell.swift */; };
+		2E6CBA2123AB3FF700FC71B2 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CBA2023AB3FF700FC71B2 /* Season.swift */; };
+		2E6CBA2323ABCBA600FC71B2 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CBA2223ABCBA600FC71B2 /* UIFont+Additions.swift */; };
 		2ED5478923AB2E3300A4106F /* ListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5478823AB2E3300A4106F /* ListCollectionCell.swift */; };
 		2ED5478B23AB306000A4106F /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5478A23AB306000A4106F /* UIView+Additions.swift */; };
 		2EE57C7723A47600001A2F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE57C7623A47600001A2F95 /* AppDelegate.swift */; };
@@ -26,6 +31,11 @@
 		2E1956FC23A4CE3C007B26C0 /* UICollectionView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Additions.swift"; sourceTree = "<group>"; };
 		2E1956FE23A4E4B5007B26C0 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2E19570023A864BA007B26C0 /* NSCollectionLayoutSection+ComposedLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+ComposedLayouts.swift"; sourceTree = "<group>"; };
+		2E6CBA1923AB36D700FC71B2 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
+		2E6CBA1B23AB3A1B00FC71B2 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		2E6CBA1D23AB3F0600FC71B2 /* SeasonCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCardCollectionCell.swift; sourceTree = "<group>"; };
+		2E6CBA2023AB3FF700FC71B2 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		2E6CBA2223ABCBA600FC71B2 /* UIFont+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
 		2ED5478823AB2E3300A4106F /* ListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionCell.swift; sourceTree = "<group>"; };
 		2ED5478A23AB306000A4106F /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		2EE57C7323A47600001A2F95 /* UICollectionViewTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,8 +62,10 @@
 		2E1956F723A4B9CE007B26C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E6CBA1B23AB3A1B00FC71B2 /* CollectionHeaderView.swift */,
 				2E1956F923A4CAF5007B26C0 /* ImageCollectionViewCell.swift */,
 				2ED5478823AB2E3300A4106F /* ListCollectionCell.swift */,
+				2E6CBA1D23AB3F0600FC71B2 /* SeasonCardCollectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -64,8 +76,17 @@
 				2E19570023A864BA007B26C0 /* NSCollectionLayoutSection+ComposedLayouts.swift */,
 				2E1956FC23A4CE3C007B26C0 /* UICollectionView+Additions.swift */,
 				2ED5478A23AB306000A4106F /* UIView+Additions.swift */,
+				2E6CBA2223ABCBA600FC71B2 /* UIFont+Additions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E6CBA1F23AB3FEA00FC71B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E6CBA2023AB3FF700FC71B2 /* Season.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2EE57C6A23A47600001A2F95 = {
@@ -87,6 +108,7 @@
 		2EE57C7523A47600001A2F95 /* UICollectionViewTour */ = {
 			isa = PBXGroup;
 			children = (
+				2E6CBA1F23AB3FEA00FC71B2 /* Models */,
 				2E1956FB23A4CE0E007B26C0 /* Extensions */,
 				2EE57C8F23A47BD6001A2F95 /* Resources */,
 				2E1956F723A4B9CE007B26C0 /* Views */,
@@ -103,6 +125,7 @@
 			children = (
 				2EE57C8C23A47A1C001A2F95 /* FlowLayoutViewController.swift */,
 				2EE57C9223A4B2F1001A2F95 /* MainViewController.swift */,
+				2E6CBA1923AB36D700FC71B2 /* CompositionalLayoutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,14 +211,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E19570123A864BA007B26C0 /* NSCollectionLayoutSection+ComposedLayouts.swift in Sources */,
+				2E6CBA2323ABCBA600FC71B2 /* UIFont+Additions.swift in Sources */,
 				2EE57C7723A47600001A2F95 /* AppDelegate.swift in Sources */,
 				2E1956FA23A4CAF5007B26C0 /* ImageCollectionViewCell.swift in Sources */,
 				2ED5478923AB2E3300A4106F /* ListCollectionCell.swift in Sources */,
 				2ED5478B23AB306000A4106F /* UIView+Additions.swift in Sources */,
+				2E6CBA1E23AB3F0600FC71B2 /* SeasonCardCollectionCell.swift in Sources */,
+				2E6CBA1A23AB36D700FC71B2 /* CompositionalLayoutViewController.swift in Sources */,
 				2E1956FD23A4CE3C007B26C0 /* UICollectionView+Additions.swift in Sources */,
 				2EE57C7923A47600001A2F95 /* SceneDelegate.swift in Sources */,
 				2EE57C8D23A47A1D001A2F95 /* FlowLayoutViewController.swift in Sources */,
+				2E6CBA1C23AB3A1B00FC71B2 /* CollectionHeaderView.swift in Sources */,
 				2E1956FF23A4E4B5007B26C0 /* MockData.swift in Sources */,
+				2E6CBA2123AB3FF700FC71B2 /* Season.swift in Sources */,
 				2EE57C9323A4B2F1001A2F95 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

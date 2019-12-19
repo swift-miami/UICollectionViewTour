@@ -5,13 +5,14 @@ final class MainViewController: UICollectionViewController, UICollectionViewDele
     // MARK: - Properties
 
     private enum Row: Int, CaseIterable {
-        case flowLayout, compositional
+        case flowLayout, multiSectionFlow, compositional
 
         static var count: Int { Row.allCases.count }
 
         var title: String {
             switch self {
             case .flowLayout:       return "Flow Layout"
+            case .multiSectionFlow: return "Multi Section Flow"
             case .compositional:    return "Compositional"
             }
         }
@@ -19,6 +20,7 @@ final class MainViewController: UICollectionViewController, UICollectionViewDele
         var image: UIImage? {
             switch self {
             case .flowLayout:       return UIImage(systemName: "flowchart.fill")
+            case .multiSectionFlow: return UIImage(systemName: "square.split.1x2.fill")
             case .compositional:    return UIImage(systemName: "rectangle.3.offgrid.fill")
             }
         }
@@ -26,6 +28,7 @@ final class MainViewController: UICollectionViewController, UICollectionViewDele
         var tintColor: UIColor? {
             switch self {
             case .flowLayout:       return .systemPurple
+            case .multiSectionFlow: return .systemBlue
             case .compositional:    return .systemOrange
             }
         }
@@ -85,7 +88,8 @@ final class MainViewController: UICollectionViewController, UICollectionViewDele
 
         switch row {
         case .flowLayout:       viewController = FlowLayoutViewController()
-        case .compositional:    viewController = UIViewController()
+        case .multiSectionFlow: viewController = UIViewController()
+        case .compositional:    viewController = CompositionalLayoutViewController()
         }
 
         navigationController?.pushViewController(viewController, animated: true)
